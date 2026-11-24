@@ -17,11 +17,11 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Installer les dépendances et le CLI Remotion
-        run: npm install && npm install -g remotion
+      - name: Installer les dépendances du projet
+        run: npm install
 
       - name: Rendre la vidéo finale avec Remotion
-        run: remotion render src/index.ts VoxExplainer out/video_finale.mp4
+        run: npx remotion render src/index.ts VoxExplainer out/video_finale.mp4
 
       - name: Sauvegarder la vidéo pour téléchargement
         uses: actions/upload-artifact@v4
