@@ -8,8 +8,7 @@ export const VoxExplainer = () => {
   return (
     <AbsoluteFill style={{ backgroundColor: '#111111', justifyContent: 'center', alignItems: 'center' }}>
       <Audio src={staticFile('voix-off-construction-pont-vox.wav')} />
-      
-      <div style={{ color: 'white', fontSize: 50, fontFamily: 'sans-serif', fontWeight: 'bold', textAlign: 'center' }}>
+      <div style={{ color: 'white', fontSize: 50, fontFamily: 'sans-serif', fontWeight: 'bold' }}>
         {seconds > 1 ? "Pipeline Cloud Actif !" : "Chargement..."}
       </div>
     </AbsoluteFill>
