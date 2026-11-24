@@ -29,3 +29,5 @@ export const Root = () => {
     </RemotionRoot>
   );
 };
+
+export default Root;
