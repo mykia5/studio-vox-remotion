@@ -15,10 +15,10 @@ jobs:
       - name: Installer Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: Installer les dépendances du projet
-        run: npm ci
+        run: npm install
 
       - name: Rendre la vidéo finale avec Remotion
         run: npx remotion render VoxExplainer out/video_finale.mp4
