@@ -1,22 +1,6 @@
-import { AbsoluteFill, Composition, RemotionRoot, useCurrentFrame, useVideoConfig } from 'remotion';
-
-export const VoxExplainer = () => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  const seconds = frame / fps;
-
-  return (
-    <AbsoluteFill style={{ backgroundColor: '#111111', justifyContent: 'center', alignItems: 'center' }}>
-      <div style={{ color: 'white', fontSize: 50, fontFamily: 'sans-serif', fontWeight: 'bold' }}>
-        {seconds > 1 ? "Pipeline Cloud Actif !" : "Chargement..."}
-      </div>
-    </AbsoluteFill>
-  );
-};
-
 export const Root = () => {
   return (
-    <RemotionRoot>
+    <>
       <Composition
         id="VoxExplainer"
         component={VoxExplainer}
@@ -25,6 +9,8 @@ export const Root = () => {
         width={1920}
         height={1080}
       />
-    </RemotionRoot>
+    </>
   );
 };
+
+export default Root;
